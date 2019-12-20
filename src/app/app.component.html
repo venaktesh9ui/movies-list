@@ -7,13 +7,13 @@
   <h1>My List</h1>
   <div class="card-container">
     <div *ngFor="let movie of mylist">
-      <app-movie-card [movie]="movie" [action]="'remove'"></app-movie-card>
+      <app-movie-card (onAction)="onActionReceiver($event)" [movie]="movie" [action]="'remove'"></app-movie-card>
     </div>
   </div>
   <h1>My Recommendations</h1>
   <div class="card-container">
     <div *ngFor="let recommendation of recommendations">
-      <app-movie-card [movie]="recommendation" [action]="'add'"></app-movie-card>
+      <app-movie-card (onAction)="onActionReceiver($event)" [movie]="recommendation" [action]="'add'"></app-movie-card>
     </div>
   </div>
 

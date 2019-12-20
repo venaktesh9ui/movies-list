@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Movie } from './movie.model';
 
 @Component({
@@ -13,5 +13,12 @@ export class MovieCardComponent {
 
   @Input()
   public action: string;
+
+  @Output()
+  public onAction = new EventEmitter();
+
+  public onActionClick(actionType: string): void {
+    this.onAction.emit({movie: this.movie, actionType:actionType})
+  }
 
 }

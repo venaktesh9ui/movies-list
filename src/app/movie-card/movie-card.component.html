@@ -2,7 +2,7 @@
     <img src="{{movie.img}}" alt="{{movie.title}}" />
     <div>
         <h1>{{movie.title}}</h1>
-        <button *ngIf="action==='add'" class="add-btn">Add</button>
-        <button *ngIf="action==='remove'" class="remove-btn">Remove</button>
+        <button (click)="onActionClick('add')" *ngIf="action==='add'" class="add-btn">Add</button>
+        <button (click)="onActionClick('remove')" *ngIf="action==='remove'" class="remove-btn">Remove</button>
     </div>
 </div>
