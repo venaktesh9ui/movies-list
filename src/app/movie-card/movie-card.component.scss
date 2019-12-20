@@ -1,5 +1,4 @@
-
-  .card {
+.card {
     border-radius: 4px;
     border: 1px solid #eee;
     background-color: #fafafa;
@@ -19,6 +18,13 @@
             padding: 6px 12px;
             border-radius: 4px;
         }
+        .remove-btn {
+            border: 1px solid #eee;
+            background: tomato;
+            color: #fff;
+            width: 100%;
+            padding: 6px 12px;
+            border-radius: 4px;
+        }
     }
-  }
-
+}
